@@ -74,7 +74,7 @@ function game()
     for(let i = 1; i <= 5; i++)
     {
         console.log("ROUND " + i)
-        console.log(playRound(prompt(), computerPlay()));
+        console.log("ROCK", computerPlay());
     }
 }
 
