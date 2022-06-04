@@ -1,0 +1,28 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    background-color: darkolivegreen;
+}
+
+.playbuttons
+{
+   display: flex;
+}
+
+
+#buttonbox
+{
+    display: flex;
+    min-height: 100px;
+    min-width: 100px;
+    color: black;
+    background-color:antiquewhite;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 14px 8px 16px 0px;
+    padding: 5px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
