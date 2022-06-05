@@ -13,6 +13,8 @@ function playRound(playerChoice, computerChoice)
     let won = "YOU WON! " + playerChoice + " BEATS " + computerChoice;
     let lose = "YOU LOST! " + computerChoice + " BEATS " + playerChoice;
     let draw = "IT'S A DRAW! BOTH CHOOSE " + playerChoice;
+    
+    showRoundChoices(playerChoice, computerChoice);
 
     switch (playerChoice)
     {
@@ -65,17 +67,34 @@ function playRound(playerChoice, computerChoice)
 
 }
 
+function showRoundChoices(playerChoice, computerChoice)
+{
+    let player = document.getElementById("playerarea");
+    let computer = document.getElementById("computerarea");
+    player.style.backgroundImage = "url('"+playerChoice+".png')";
+    computer.style.backgroundImage = "url('"+computerChoice+".png')";
+}
+
+function playRock()
+{
+    playRound(_CHOICES[0], computerPlay());
+}
+
+function playPaper()
+{
+    playRound("PAPER", computerPlay());
+}
+
+function playScissors()
+{
+    playRound("SCISSORS", computerPlay());
+}
 
 function game()
 {
-    let myPoints = 0;
-    let comPoints = 0;
-
     for(let i = 1; i <= 5; i++)
     {
-        console.log("ROUND " + i)
-        console.log("ROCK", computerPlay());
+        
     }
 }
 
-game();
