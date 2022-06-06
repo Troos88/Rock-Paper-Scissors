@@ -88,12 +88,12 @@ function showScores()
     if(playerPoints > computerPoints)
     {
         message.innerText = "YOU WON THE GAME!";
-        flashScore(playerScore);
+        flashElement(playerScore);
     }
     else if(playerPoints < computerPoints)
     {
         message.innerText = "YOU LOST THE GAME!";
-        flashScore(computerScore);
+        flashElement(computerScore);
     }
     else
     {
@@ -105,7 +105,7 @@ function showScores()
 
 }
 
-function flashScore(score)
+function flashElement(score)
 {
     score.style.transform = "scale(1.5)";
     score.style.transition = "1s";
@@ -160,6 +160,8 @@ function resetArea()
     if(games > 5) round = 5;
 
     roundText.innerText = "ROUND " + round;
+    if(round != 5) flashElement(roundText);
+
     rockButton.onclick = playRock;
     paperButton.onclick = playPaper;
     scissorsButton.onclick = playScissors;
