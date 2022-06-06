@@ -160,7 +160,7 @@ function resetArea()
     if(games > 5) round = 5;
 
     roundText.innerText = "ROUND " + round;
-    if(round != 5) flashElement(roundText);
+    if(games < 6) flashElement(roundText);
 
     rockButton.onclick = playRock;
     paperButton.onclick = playPaper;
