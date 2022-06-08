@@ -136,7 +136,7 @@ function showRoundChoices(playerChoice, computerChoice)
     arena.style.opacity = 100;
     arena.style.gap = "10%";
     arena.style.transition = "0.5s";
-    message.style.transform = "scale(2)";
+    message.style.fontSize = "min(3vw, 36px)";
     message.style.transition = "1s";
 
     
@@ -168,7 +168,7 @@ function resetArea()
     arena.style.opacity = 0;
     arena.style.gap = "100%";
     arena.style.transition = "0.5s";
-    message.style.transform = "scale(0)";
+    message.style.fontSize = "min(3vw, 0px)";
     message.style.transition = "1s";
     playerScore.innerText = playerPoints;
     computerScore.innerText = computerPoints;
